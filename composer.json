@@ -1,0 +1,13 @@
+{
+    "name": "ronan/test_twig",
+    "description": "Premier projet avec twig",
+    "authors": [
+        {
+            "name": "Ronan",
+            "email": "martin.ronan@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
