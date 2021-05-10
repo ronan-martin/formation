@@ -8,13 +8,17 @@
 	}
 
 	// Rendu du template
-	$loader = new Twig_Loader_Filesystem(__DIR__ . '/templates');
-	$twig = new Twig_Environment($loader, [
+	$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
+	$twig = new \Twig\Environment($loader, [
 		'debug' => true,
 		'cache' => __DIR__ . '/tmp'
 	]);
 	
-	if($page === 'home') {
-		echo $twig-> render('home.twig');
+	switch ($page) {
+		case 'home':
+			echo $twig->render('home.twig', ['title' => 'Accueil']);
+			break;
+		case 'contact':
+			echo $twig->render('contact.twig', ['title' => 'Contact']);
 	}
 ?>
